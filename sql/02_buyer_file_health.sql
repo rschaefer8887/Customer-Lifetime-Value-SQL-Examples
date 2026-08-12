@@ -1,16 +1,17 @@
 -- Buyer File Health: monthly acquisition cohorts and trailing rebuy rates
--- Flags cohorts lagging the prior 3-cohort average for the same channel.
 
 WITH cohort_stats AS (
     SELECT
         DATE_TRUNC('month', CAST(c.first_order_date AS DATE)) AS cohort_month,
-        c.acquisition_channel,
+        ch.channel_name AS acquisition_channel,
         COUNT(DISTINCT c.customer_id) AS customers,
         COUNT(DISTINCT CASE
             WHEN o.order_date > c.first_order_date AND o.is_size_exchange = 0
             THEN o.customer_id
         END) AS rebuyers
     FROM customers c
+    JOIN marketing_channels ch
+      ON ch.channel_id = c.acquisition_channel_id
     LEFT JOIN orders o ON o.customer_id = c.customer_id
     GROUP BY 1, 2
 ),

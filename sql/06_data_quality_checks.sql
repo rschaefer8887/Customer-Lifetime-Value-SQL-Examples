@@ -1,6 +1,5 @@
 -- Data quality / anomaly checks used before trusting channel metrics.
 
--- 1) Duplicate customer IDs
 SELECT 'duplicate_customers' AS check_name, COUNT(*) AS issue_count
 FROM (
     SELECT customer_id
@@ -11,7 +10,6 @@ FROM (
 
 UNION ALL
 
--- 2) Orders with no customer record
 SELECT 'orphan_orders', COUNT(*)
 FROM orders o
 LEFT JOIN customers c ON c.customer_id = o.customer_id
@@ -20,7 +18,6 @@ WHERE c.customer_id IS NULL
 
 UNION ALL
 
--- 3) Size-exchange share (watch for revenue inflation)
 SELECT
     'size_exchange_order_share_pct',
     ROUND(100.0 * AVG(is_size_exchange), 2)
@@ -28,21 +25,27 @@ FROM orders
 
 UNION ALL
 
--- 4) Acquisition channel blank / unexpected
-SELECT 'unknown_acquisition_channel', COUNT(*)
-FROM customers
-WHERE acquisition_channel IS NULL
-   OR TRIM(acquisition_channel) = ''
+-- Customers whose acquisition_channel_id is not in the dimension table
+SELECT 'customers_missing_channel_dim', COUNT(*)
+FROM customers c
+LEFT JOIN marketing_channels ch
+  ON ch.channel_id = c.acquisition_channel_id
+WHERE ch.channel_id IS NULL
 
 UNION ALL
 
--- 5) Meta acquisition customers whose first order channel conflicts (simple hygiene)
-SELECT 'meta_acq_flagged_for_review', COUNT(*)
+-- Orders pointing at an unknown order_channel_id
+SELECT 'orders_missing_channel_dim', COUNT(*)
+FROM orders o
+LEFT JOIN marketing_channels ch
+  ON ch.channel_id = o.order_channel_id
+WHERE ch.channel_id IS NULL
+
+UNION ALL
+
+-- Customers whose acquisition_month_id is not in months
+SELECT 'customers_missing_month_dim', COUNT(*)
 FROM customers c
-WHERE c.acquisition_channel = 'meta_acquisition'
-  AND EXISTS (
-      SELECT 1
-      FROM orders o
-      WHERE o.customer_id = c.customer_id
-        AND o.order_date < c.first_order_date
-  );
+LEFT JOIN months m
+  ON m.month_id = c.acquisition_month_id
+WHERE m.month_id IS NULL;

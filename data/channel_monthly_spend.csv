@@ -1,0 +1,121 @@
+month_id,month_label,channel_id,channel_name,channel_code,spend
+1,2023-01,1,Direct Mail,direct_mail,48786.96
+1,2023-01,2,Paid Social,paid_social,52709.86
+1,2023-01,3,Email,email,8280.76
+1,2023-01,4,Organic,organic,0.0
+1,2023-01,5,Direct,direct,0.0
+2,2023-02,1,Direct Mail,direct_mail,40779.64
+2,2023-02,2,Paid Social,paid_social,55073.26
+2,2023-02,3,Email,email,6723.46
+2,2023-02,4,Organic,organic,0.0
+2,2023-02,5,Direct,direct,0.0
+3,2023-03,1,Direct Mail,direct_mail,47857.17
+3,2023-03,2,Paid Social,paid_social,64402.23
+3,2023-03,3,Email,email,8149.43
+3,2023-03,4,Organic,organic,0.0
+3,2023-03,5,Direct,direct,0.0
+4,2023-04,1,Direct Mail,direct_mail,51689.6
+4,2023-04,2,Paid Social,paid_social,69582.8
+4,2023-04,3,Email,email,8976.85
+4,2023-04,4,Organic,organic,0.0
+4,2023-04,5,Direct,direct,0.0
+5,2023-05,1,Direct Mail,direct_mail,58473.79
+5,2023-05,2,Paid Social,paid_social,58645.85
+5,2023-05,3,Email,email,7812.11
+5,2023-05,4,Organic,organic,0.0
+5,2023-05,5,Direct,direct,0.0
+6,2023-06,1,Direct Mail,direct_mail,50124.41
+6,2023-06,2,Paid Social,paid_social,67384.55
+6,2023-06,3,Email,email,9444.99
+6,2023-06,4,Organic,organic,0.0
+6,2023-06,5,Direct,direct,0.0
+7,2023-07,1,Direct Mail,direct_mail,54564.14
+7,2023-07,2,Paid Social,paid_social,59874.34
+7,2023-07,3,Email,email,9332.0
+7,2023-07,4,Organic,organic,0.0
+7,2023-07,5,Direct,direct,0.0
+8,2023-08,1,Direct Mail,direct_mail,51074.27
+8,2023-08,2,Paid Social,paid_social,56466.15
+8,2023-08,3,Email,email,9034.81
+8,2023-08,4,Organic,organic,0.0
+8,2023-08,5,Direct,direct,0.0
+9,2023-09,1,Direct Mail,direct_mail,59531.07
+9,2023-09,2,Paid Social,paid_social,55331.84
+9,2023-09,3,Email,email,10217.89
+9,2023-09,4,Organic,organic,0.0
+9,2023-09,5,Direct,direct,0.0
+10,2023-10,1,Direct Mail,direct_mail,62326.4
+10,2023-10,2,Paid Social,paid_social,82819.18
+10,2023-10,3,Email,email,11868.31
+10,2023-10,4,Organic,organic,0.0
+10,2023-10,5,Direct,direct,0.0
+11,2023-11,1,Direct Mail,direct_mail,63428.18
+11,2023-11,2,Paid Social,paid_social,82696.27
+11,2023-11,3,Email,email,9871.52
+11,2023-11,4,Organic,organic,0.0
+11,2023-11,5,Direct,direct,0.0
+12,2023-12,1,Direct Mail,direct_mail,61913.46
+12,2023-12,2,Paid Social,paid_social,88939.38
+12,2023-12,3,Email,email,12525.93
+12,2023-12,4,Organic,organic,0.0
+12,2023-12,5,Direct,direct,0.0
+13,2024-01,1,Direct Mail,direct_mail,43744.88
+13,2024-01,2,Paid Social,paid_social,56443.56
+13,2024-01,3,Email,email,6899.24
+13,2024-01,4,Organic,organic,0.0
+13,2024-01,5,Direct,direct,0.0
+14,2024-02,1,Direct Mail,direct_mail,42546.36
+14,2024-02,2,Paid Social,paid_social,57014.61
+14,2024-02,3,Email,email,7038.5
+14,2024-02,4,Organic,organic,0.0
+14,2024-02,5,Direct,direct,0.0
+15,2024-03,1,Direct Mail,direct_mail,57375.76
+15,2024-03,2,Paid Social,paid_social,67473.96
+15,2024-03,3,Email,email,7709.54
+15,2024-03,4,Organic,organic,0.0
+15,2024-03,5,Direct,direct,0.0
+16,2024-04,1,Direct Mail,direct_mail,50883.49
+16,2024-04,2,Paid Social,paid_social,55974.11
+16,2024-04,3,Email,email,9584.68
+16,2024-04,4,Organic,organic,0.0
+16,2024-04,5,Direct,direct,0.0
+17,2024-05,1,Direct Mail,direct_mail,60325.22
+17,2024-05,2,Paid Social,paid_social,69461.92
+17,2024-05,3,Email,email,8626.58
+17,2024-05,4,Organic,organic,0.0
+17,2024-05,5,Direct,direct,0.0
+18,2024-06,1,Direct Mail,direct_mail,60452.48
+18,2024-06,2,Paid Social,paid_social,55764.65
+18,2024-06,3,Email,email,8941.13
+18,2024-06,4,Organic,organic,0.0
+18,2024-06,5,Direct,direct,0.0
+19,2024-07,1,Direct Mail,direct_mail,51980.24
+19,2024-07,2,Paid Social,paid_social,63268.21
+19,2024-07,3,Email,email,9559.99
+19,2024-07,4,Organic,organic,0.0
+19,2024-07,5,Direct,direct,0.0
+20,2024-08,1,Direct Mail,direct_mail,51408.17
+20,2024-08,2,Paid Social,paid_social,67901.77
+20,2024-08,3,Email,email,9291.01
+20,2024-08,4,Organic,organic,0.0
+20,2024-08,5,Direct,direct,0.0
+21,2024-09,1,Direct Mail,direct_mail,50922.53
+21,2024-09,2,Paid Social,paid_social,55235.1
+21,2024-09,3,Email,email,10109.42
+21,2024-09,4,Organic,organic,0.0
+21,2024-09,5,Direct,direct,0.0
+22,2024-10,1,Direct Mail,direct_mail,63318.75
+22,2024-10,2,Paid Social,paid_social,69452.32
+22,2024-10,3,Email,email,10583.39
+22,2024-10,4,Organic,organic,0.0
+22,2024-10,5,Direct,direct,0.0
+23,2024-11,1,Direct Mail,direct_mail,58605.82
+23,2024-11,2,Paid Social,paid_social,78748.25
+23,2024-11,3,Email,email,11568.41
+23,2024-11,4,Organic,organic,0.0
+23,2024-11,5,Direct,direct,0.0
+24,2024-12,1,Direct Mail,direct_mail,78130.49
+24,2024-12,2,Paid Social,paid_social,84050.19
+24,2024-12,3,Email,email,10250.82
+24,2024-12,4,Organic,organic,0.0
+24,2024-12,5,Direct,direct,0.0

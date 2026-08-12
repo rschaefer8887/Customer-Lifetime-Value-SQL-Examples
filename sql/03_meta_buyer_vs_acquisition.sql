@@ -1,23 +1,29 @@
--- Split Meta into buyer-file vs acquisition analytical channels
--- Audits whether "acquisition" spend is actually producing new customers.
+-- Paid Social customers: buyer-file vs acquisition subtypes
+-- Shows acquisition purity within the Paid Social marketing channel
 
-WITH meta_orders AS (
+WITH paid_social_customers AS (
     SELECT
+        c.customer_id,
+        c.first_order_date,
+        c.paid_social_subtype AS meta_bucket,
+        ch.channel_name
+    FROM customers c
+    JOIN marketing_channels ch
+      ON ch.channel_id = c.acquisition_channel_id
+    WHERE ch.channel_code = 'paid_social'
+      AND c.paid_social_subtype IN ('buyer_file', 'acquisition')
+),
+meta_orders AS (
+    SELECT
+        p.meta_bucket,
         o.order_id,
         o.customer_id,
         CAST(o.order_date AS DATE) AS order_date,
         o.gross_revenue,
-        c.first_order_date,
-        c.acquisition_channel,
-        CASE
-            WHEN c.acquisition_channel = 'meta_buyer_file' THEN 'buyer_file'
-            WHEN c.acquisition_channel = 'meta_acquisition' THEN 'acquisition'
-            ELSE 'other'
-        END AS meta_bucket
-    FROM orders o
-    JOIN customers c ON c.customer_id = o.customer_id
-    WHERE c.acquisition_channel IN ('meta_buyer_file', 'meta_acquisition')
-      AND o.is_size_exchange = 0
+        p.first_order_date
+    FROM paid_social_customers p
+    JOIN orders o ON o.customer_id = p.customer_id
+    WHERE o.is_size_exchange = 0
 ),
 new_vs_existing AS (
     SELECT
