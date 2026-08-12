@@ -1,7 +1,7 @@
 # Marketing Analytics SQL Portfolio
 
 Sample DTC marketing warehouse + SQL analyses that mirror real marketing measurement work:
-channel cohort LTV, Buyer File Health, Meta buyer-file vs acquisition, Direct Mail holdout incrementality, brand vs non-brand search, and data quality checks.
+channel cohort LTV.
 
 Built for interview demos and to practice warehouse-style SQL (joins, CTEs, window functions, experiment readouts).
 
