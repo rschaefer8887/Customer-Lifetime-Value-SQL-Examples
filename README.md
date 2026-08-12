@@ -55,7 +55,7 @@ Paid Social also carries `paid_social_subtype` on customers (`buyer_file` / `acq
 | `07_channel_month_cohort_spine.sql` | Full channel x month grid (includes zeros) |
 | `08_channel_margin.sql` | Gross margin by acquisition channel (`revenue - cogs`) |
 | `09_channel_monthly_spend.sql` | Channel spend by month for 2023-2024 |
-| `10_customers_acquired_by_month.sql` | Acquisitions by month/channel + margin, CAC, Loss at Acquisition |
+| `CLTV - Loss at Acquisition Query.sql` | Acquisitions by month/channel + margin, CAC, Loss at Acquisition |
 
 ## How to talk about this in interviews
 
