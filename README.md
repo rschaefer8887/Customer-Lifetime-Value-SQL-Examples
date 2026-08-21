@@ -3,7 +3,7 @@
 Sample DTC marketing warehouse + SQL analyses that mirror real marketing measurement work:
 channel cohort LTV.
 
-Built for interview demos and to practice warehouse-style SQL (joins, CTEs, window functions, experiment readouts).
+Built to demonstrate common SQL queries required for marketing analytics.
 
 ## Stack
 
